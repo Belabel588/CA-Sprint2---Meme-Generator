@@ -9,21 +9,30 @@
 </head>
 
 
-<body>
+<body onload="onInit()">
 
+  <!--* GALLERY SECTION -->
 
   <section class="gallery"></section>
 
 
 
+  <!--* EDITOR SECTION -->
 
   <section class="editor"></section>
+  <canvas class="meme-canvas" height="450" width="450">
+
+    <img class="meme-img" src="" alt="meme-img">
+
+  </canvas>
 
 
 
 
 
   <script src="js/main.js"></script>
+  <script src="js/services/meme.service.js"></script>
+  <script src="js/meme.controller.js"></script>
 </body>
 
 </html>
