@@ -6,12 +6,15 @@ let gElCanvas
 let gCtx
 
 
+
+
 //************ PAGE LOADING FUNCTIONS ************//
 function onInit() {
   gElCanvas = document.querySelector('.meme-canvas')
   gCtx = gElCanvas.getContext('2d')
   OnRenderMeme()
   onRenderImgs()
+  onChangeTxt()
 }
 
 
@@ -19,16 +22,14 @@ function onInit() {
 
 //************ EDITOR FUNCTIONS ************//
 
-function onChangeTxt(txt) {
-  setLineTxt(txt)
-  OnRenderMeme()
+function onChangeTxt() {
+  let memeTxt = document.querySelector('.meme-text-input')
+
+  memeTxt.addEventListener('input', () => {
+    setLineTxt(memeTxt.value)
+    OnRenderMeme(gMeme.selectedImgId)
+  })
 }
-
-// const memeText = document.querySelector('.meme-text-input')
-
-// memeText.addEventListener('input', () => {
-//   setLineTxt(memeText.value)
-
 
 
 //************ GALLERY FUNCTIONS ************//

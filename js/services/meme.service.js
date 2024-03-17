@@ -57,6 +57,7 @@ function setLineTxt(txt) {
 //! rendering both the photo and the text on it //
 function renderMeme(imgId) {
   const meme = getMeme()
+  meme.selectedImgId = imgId
   const img = gImgs.find(img => img.id === imgId)
   if (!img) return
 
