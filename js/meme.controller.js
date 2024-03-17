@@ -17,6 +17,20 @@ function onInit() {
 
 
 
+//************ EDITOR FUNCTIONS ************//
+
+function onChangeTxt(txt) {
+  setLineTxt(txt)
+  OnRenderMeme()
+}
+
+// const memeText = document.querySelector('.meme-text-input')
+
+// memeText.addEventListener('input', () => {
+//   setLineTxt(memeText.value)
+
+
+
 //************ GALLERY FUNCTIONS ************//
 
 function onRenderImgs() {

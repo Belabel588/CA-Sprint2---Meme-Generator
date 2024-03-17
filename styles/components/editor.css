@@ -4,10 +4,11 @@
 
 
 .editor {
+  margin: 0 auto;
+  width: 60%;
   grid-template-columns: 1fr 1fr;
-  padding: 5rem;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 
 }
 
@@ -29,4 +30,34 @@ canvas {
 
 .meme-text-input::placeholder {
   color: rgba(255, 255, 255, 0.695);
+}
+
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+
+  height: 2rem;
+  width: 2rem;
+
+  background-color: #39d939;
+  color: white;
+  /* border: none; */
+  padding: 1rem 1rem;
+  border-radius: 4.375rem;
+  cursor: pointer;
+
+}
+
+.add-btn:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.add-div {
+  align-self: start;
+  gap: 0.3rem;
 }

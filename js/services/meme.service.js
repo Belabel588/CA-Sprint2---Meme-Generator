@@ -19,7 +19,7 @@ let gMeme = {
   selectedLineIdx: 0,
   lines: [
     {
-      txt: 'Aliens',
+      txt: '',
       color: 'white',
       size: 40,
       x: 190,
@@ -43,6 +43,13 @@ function getImgs() {
 function getMeme() {
   return gMeme
 }
+
+
+//************ EDITOR MECHANICS ************//
+function setLineTxt(txt) {
+  gMeme.lines[gMeme.selectedLineIdx].txt = txt
+}
+
 
 
 //************ CANVAS MECHANICS ************//

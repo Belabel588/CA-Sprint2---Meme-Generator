@@ -2,7 +2,23 @@
   box-sizing: border-box;
 }
 
+/* ************ FLEX ************ */
+.flex {
+  display: flex;
+}
 
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.space {
+  justify-content: space-between;
+}
+
+.flex.align {
+  align-items: center;
+
+}
 
 
 /* ************ GRID ************ */

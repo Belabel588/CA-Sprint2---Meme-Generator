@@ -19,9 +19,14 @@
       <img class="meme-img" src="" alt="meme-img">
     </canvas>
 
-    <div class="editor-container grid column">
-      <input class="meme-text-input" type="text" placeholder="type text here">
-    </div>
+    <section class="editor-container grid column space">
+
+      <div class="add-div flex row align">
+        <input oninput="onChangeTxt(this.value)" class="meme-text-input" type="text"
+          placeholder="type text for the Meme here">
+        <button class="add-btn"> + </button>
+      </div>
+    </section>
 
   </section>
 
@@ -29,7 +34,10 @@
 
 
 
+
+
   <!--* GALLERY SECTION -->
+
 
   <section class="gallery grid center columns-auto">
 
