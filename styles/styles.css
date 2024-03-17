@@ -1,1 +1,7 @@
+/* ************ BASICS ************ */
+
 @import url(basics/base.css);
+@import url(basics/helpers.css);
+
+/* ************ COMPONENTS ************ */
+@import url(components/gallery.css);

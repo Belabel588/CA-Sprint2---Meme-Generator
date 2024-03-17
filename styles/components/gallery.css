@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.gallery {
+  height: fit-content;
+  gap: 0.5rem;
+
+}

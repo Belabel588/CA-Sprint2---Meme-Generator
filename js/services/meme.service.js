@@ -36,6 +36,10 @@ let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
 //************ DATA CONTROL FUNCTIONS ************//
 
+function getImgs() {
+  return gImgs
+}
+
 function getMeme() {
   return gMeme
 }
@@ -44,7 +48,7 @@ function getMeme() {
 //************ CANVAS MECHANICS ************//
 
 //! rendering both the photo and the text on it //
-function renderImg(imgId) {
+function renderMeme(imgId) {
   const meme = getMeme()
   const img = gImgs.find(img => img.id === imgId)
   if (!img) return

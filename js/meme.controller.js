@@ -11,16 +11,38 @@ function onInit() {
   gElCanvas = document.querySelector('.meme-canvas')
   gCtx = gElCanvas.getContext('2d')
   OnRenderMeme()
+  onRenderImgs()
 }
+
+
+
+
+//************ GALLERY FUNCTIONS ************//
+
+function onRenderImgs() {
+  const imgs = getImgs()
+
+
+  let strHtml = ''
+
+  imgs.forEach(img => {
+    strHtml += `
+    <img src="${img.url}" alt="meme image" onclick="OnRenderMeme(${img.id})">
+    `
+  }
+  )
+
+  const gallery = document.querySelector('.gallery')
+  gallery.innerHTML = strHtml
+}
+
 
 
 
 //************ CANVAS FUNCTIONS ************//
 
-function OnRenderMeme() {
-  renderImg(1)
-
-
+function OnRenderMeme(imgId) {
+  renderMeme(imgId)
 }
 
 

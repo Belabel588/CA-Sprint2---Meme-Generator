@@ -2,10 +2,27 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: rgb(81, 81, 81);
+}
+
 body {
+  margin: 0 auto;
+
+
+  width: 80vw;
+  padding: 3rem;
+  gap: 3rem;
+
   background-color: #333333;
 }
 
 canvas {
   border: 1px solid #000;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+img {
+  border-radius: 4.375rem;
 }
