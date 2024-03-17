@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+
+
+
+/* ************ GRID ************ */
+
 .grid {
   display: grid;
 }
@@ -12,9 +17,9 @@
 
 }
 
-.grid.columns-auto {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-flow: dense;
+
+.grid.column {
+  grid-template-columns: 1fr;
 }
 
 .grid.columns-auto img {

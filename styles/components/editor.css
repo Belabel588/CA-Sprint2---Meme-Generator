@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.editor {
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem;
+  justify-content: center;
+  gap: 2rem;
+
+}
+
+canvas {
+  border: 1px solid #000;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+
+.meme-text-input {
+  color: white;
+  height: 3rem;
+  min-width: 15rem;
+  max-width: 30rem;
+  border-radius: 4.375rem;
+  background-color: rgba(57, 217, 57, 0.736);
+}
+
+.meme-text-input::placeholder {
+  color: rgba(255, 255, 255, 0.695);
+}
