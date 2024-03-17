@@ -18,7 +18,7 @@ function onInit() {
 //************ CANVAS FUNCTIONS ************//
 
 function OnRenderMeme() {
-  renderImg('Aliens', 170, 50)
+  renderImg(1)
 
 
 }
