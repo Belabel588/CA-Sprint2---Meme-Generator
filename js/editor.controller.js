@@ -16,6 +16,8 @@ function onInit() {
   onRenderImgs()
   onChangeTxt()
   onChangeColor()
+  onBiggerTxt()
+  onSmallerTxt()
 }
 
 
@@ -48,6 +50,25 @@ function onChangeColor() {
     setColor(elColorPicker.value)
     OnRenderMeme(gMeme.selectedImgId)
 
+  })
+}
+
+function onBiggerTxt() {
+  const elBiggerTxtBtn = document.querySelector('.increase-text-btn')
+
+  elBiggerTxtBtn.addEventListener('click', () => {
+    setBiggerTxt()
+    OnRenderMeme(gMeme.selectedImgId)
+  })
+}
+
+
+function onSmallerTxt() {
+  const elSmallerTxtBtn = document.querySelector('.decrease-text-btn')
+
+  elSmallerTxtBtn.addEventListener('click', () => {
+    setSmallerTxt()
+    OnRenderMeme(gMeme.selectedImgId)
   })
 }
 

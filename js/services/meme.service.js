@@ -21,6 +21,15 @@ function setColor(color) {
   gMeme.lines[gMeme.selectedLineIdx].color = color
 }
 
+function setBiggerTxt() {
+  gMeme.lines[gMeme.selectedLineIdx].size += 5
+}
+
+function setSmallerTxt() {
+  gMeme.lines[gMeme.selectedLineIdx].size -= 5
+
+}
+
 
 
 //************ CANVAS MECHANICS ************//

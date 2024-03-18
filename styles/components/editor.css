@@ -5,10 +5,10 @@
 
 .editor {
   margin: 0 auto;
-  width: 40%;
+  width: 50%;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 
 }
 
@@ -23,6 +23,7 @@ canvas {
 
 
 .meme-text-input {
+
   font-size: 2rem;
   color: white;
   height: 4rem;
@@ -63,7 +64,8 @@ canvas {
 
 .add-div {
   align-self: start;
-  gap: 0.3rem;
+  /* justify-self: center; */
+  gap: 0.1rem;
 }
 
 
@@ -145,4 +147,72 @@ canvas {
 #color-picker {
   top: 50px;
   left: 0;
+}
+
+.increase-text-btn {
+  color: rgb(197, 128, 43);
+  background-color: rgb(197, 128, 43);
+  border: none;
+}
+
+.font-size-plus-btn-container {
+  background-color: rgb(197, 128, 43);
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 5rem;
+  border-radius: 4.375rem;
+  gap: 3rem;
+}
+
+.font-size-plus-btn-container:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
+
+.fa-text-height {
+  color: white;
+  margin-right: 2rem;
+  font-size: 2rem;
+  width: 0.2rem;
+  height: 0.2rem;
+}
+
+.fa-plus {
+  color: white;
+  margin-right: 1rem;
+  font-size: 2rem;
+  width: 0.1rem;
+  height: 0.3rem;
+}
+
+.decrease-text-btn {
+  color: rgb(197, 189, 43);
+  background-color: rgb(197, 189, 43);
+  border: none;
+}
+
+.font-size-minus-btn-container {
+  background-color: rgb(197, 189, 43);
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 5rem;
+  border-radius: 4.375rem;
+  gap: 3rem;
+}
+
+.font-size-minus-btn-container:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.fa-minus {
+  color: white;
+  margin-right: 1rem;
+  font-size: 2rem;
+  width: 0.1rem;
+  height: 0.3rem;
 }
