@@ -12,6 +12,9 @@
 
 }
 
+
+
+
 canvas {
   border: 1px solid #000;
   margin: 0 auto;
@@ -63,10 +66,16 @@ canvas {
   gap: 0.3rem;
 }
 
+
+.meme-tools {
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 .download-btn-container {
   background-color: rgb(165, 45, 198);
   align-items: center;
-  width: 12rem;
+  width: 13rem;
   height: 5rem;
 
   border-radius: 4.375rem;
@@ -83,7 +92,6 @@ canvas {
   color: white;
   /* border: none; */
   text-decoration: none;
-  border-radius: 4.375rem;
   cursor: pointer;
 
   gap: 3rem;
@@ -99,4 +107,42 @@ canvas {
   font-size: 2rem;
   width: 0.2rem;
   height: 0.2rem;
+}
+
+.color-btn-container {
+
+  background-color: rgb(77, 43, 197);
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 5rem;
+  border-radius: 4.375rem;
+  gap: 1rem;
+
+}
+
+.color-btn-container:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
+
+.fa-brush {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  width: 0.2rem;
+  height: 0.2rem;
+}
+
+.color-picker-label {
+  font-size: 2rem;
+  color: white;
+}
+
+
+#color-picker {
+  top: 50px;
+  left: 0;
 }

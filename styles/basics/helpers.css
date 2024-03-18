@@ -42,3 +42,7 @@
   width: 100%;
   height: auto;
 }
+
+.grid.row {
+  grid-template-rows: min-max(10px, auto);
+}

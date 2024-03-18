@@ -17,6 +17,10 @@ function setLineTxt(txt) {
   gMeme.lines[gMeme.selectedLineIdx].txt = txt
 }
 
+function setColor(color) {
+  gMeme.lines[gMeme.selectedLineIdx].color = color
+}
+
 
 
 //************ CANVAS MECHANICS ************//

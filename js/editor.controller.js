@@ -15,6 +15,7 @@ function onInit() {
   OnRenderMeme()
   onRenderImgs()
   onChangeTxt()
+  onChangeColor()
 }
 
 
@@ -32,12 +33,22 @@ function onChangeTxt() {
 }
 
 function onDownloadMeme() {
-  const downloadLink = document.querySelector('.donwnload-meme-link')
+  const elDownloadLink = document.querySelector('.donwnload-meme-link')
 
   const pngDataUrl = gElCanvas.toDataURL("image/png")
   // console.log(pngDataUrl)
 
-  downloadLink.href = pngDataUrl
+  elDownloadLink.href = pngDataUrl
+}
+
+function onChangeColor() {
+  const elColorPicker = document.querySelector('#color-picker')
+
+  elColorPicker.addEventListener('input', () => {
+    setColor(elColorPicker.value)
+    OnRenderMeme(gMeme.selectedImgId)
+
+  })
 }
 
 
