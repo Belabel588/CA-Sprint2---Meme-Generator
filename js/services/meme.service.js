@@ -72,14 +72,14 @@ function renderMeme(imgId) {
 
     //! where the addText is activated
     meme.lines.forEach(line => {
-      AddText(line.txt, line.x, line.y)
+      AddText(line, line.txt, line.x, line.y)
     })
   }
 }
 
-function AddText(text, x, y) {
-  gCtx.font = `${gMeme.lines[0].size}px Arial`
-  gCtx.fillStyle = gMeme.lines[0].color
+function AddText(line, text, x, y) {
+  gCtx.font = `${line.size}px Arial`
+  gCtx.fillStyle = line.color
   gCtx.fillText(text, x, y)
   gCtx.lineWidth = 1
 
