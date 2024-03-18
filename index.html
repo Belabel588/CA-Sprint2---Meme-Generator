@@ -40,9 +40,17 @@
     <section class="editor-container grid column space">
 
       <div class="add-div flex row align">
-        <input class="meme-text-input" type="text" placeholder="type here text for the Meme">
+        <input class="meme-text-input" type="text" placeholder="type Meme's text here">
         <button class="add-btn"> + </button>
       </div>
+
+      <div class="download-btn-container flex">
+        <a class="donwnload-meme-link flex row space align" href="#" onclick="onDownloadMeme(this)" download='meme.jpg'>
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          download
+        </a>
+      </div>
+
     </section>
 
   </section>
@@ -87,6 +95,11 @@
 
   <script src="js/editor.controller.js"></script>
   <script src="js/gallery.controller.js"></script>
+
+
+
+  <!--**************** ADD-ONS **************** -->
+  <script src="https://kit.fontawesome.com/9a826168b8.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

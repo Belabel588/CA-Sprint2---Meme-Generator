@@ -31,11 +31,22 @@ function onChangeTxt() {
   })
 }
 
+function onDownloadMeme() {
+  const downloadLink = document.querySelector('.donwnload-meme-link')
+
+  const pngDataUrl = gElCanvas.toDataURL("image/png")
+  // console.log(pngDataUrl)
+
+  downloadLink.href = pngDataUrl
+}
+
 
 //************ CANVAS FUNCTIONS ************//
 
 function OnRenderMeme(imgId) {
   renderMeme(imgId)
 }
+
+
 
 
