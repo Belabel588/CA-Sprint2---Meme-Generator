@@ -38,7 +38,7 @@ canvas {
 }
 
 
-.add-btn {
+.add-line-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ canvas {
 
 }
 
-.add-btn:hover {
+.add-line-btn:hover {
   transform: scale(1.1);
   transition: 0.5s;
 }

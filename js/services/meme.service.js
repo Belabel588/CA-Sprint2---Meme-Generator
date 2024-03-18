@@ -30,6 +30,16 @@ function setSmallerTxt() {
 
 }
 
+function addLine() {
+  gMeme.lines.push({
+    txt: `new text`,
+    size: 40,
+    color: 'white',
+    x: 20,
+    y: getRandomInt(0, gElCanvas.height)
+  })
+}
+
 
 
 //************ CANVAS MECHANICS ************//
@@ -74,4 +84,15 @@ function AddText(text, x, y) {
 function fitCanvasForImg(elImg) {
   gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
   gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
+}
+
+
+
+
+//************ UTIL FUNCTION************//
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }

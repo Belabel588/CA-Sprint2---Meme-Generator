@@ -18,6 +18,7 @@ function onInit() {
   onChangeColor()
   onBiggerTxt()
   onSmallerTxt()
+  onAddLine()
 }
 
 
@@ -72,6 +73,15 @@ function onSmallerTxt() {
   })
 }
 
+
+function onAddLine() {
+  const elAddLineBtn = document.querySelector('.add-line-btn')
+
+  elAddLineBtn.addEventListener('click', () => {
+    addLine()
+    OnRenderMeme(gMeme.selectedImgId)
+  })
+}
 
 //************ CANVAS FUNCTIONS ************//
 
