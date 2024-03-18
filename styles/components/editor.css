@@ -62,6 +62,25 @@ canvas {
   transition: 0.5s;
 }
 
+.clear-line-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
+
+  height: 3rem;
+  width: 3rem;
+
+  background-color: #d94139;
+  color: white;
+  /* border: none; */
+  padding: 1rem 1rem;
+  border-radius: 4.375rem;
+  cursor: pointer;
+
+}
+
 .add-div {
   align-self: start;
   /* justify-self: center; */

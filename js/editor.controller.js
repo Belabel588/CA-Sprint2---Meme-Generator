@@ -19,6 +19,7 @@ function onInit() {
   onBiggerTxt()
   onSmallerTxt()
   onAddLine()
+  onClearLine()
 }
 
 
@@ -79,6 +80,15 @@ function onAddLine() {
 
   elAddLineBtn.addEventListener('click', () => {
     addLine()
+    OnRenderMeme(gMeme.selectedImgId)
+  })
+}
+
+function onClearLine() {
+  const elClearLineBtn = document.querySelector('.clear-line-btn')
+
+  elClearLineBtn.addEventListener('click', () => {
+    clearLine()
     OnRenderMeme(gMeme.selectedImgId)
   })
 }

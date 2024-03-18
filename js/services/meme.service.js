@@ -40,6 +40,10 @@ function addLine() {
   })
 }
 
+function clearLine() {
+  gMeme.lines.splice(gMeme.selectedLineIdx, 1);
+}
+
 
 
 //************ CANVAS MECHANICS ************//
