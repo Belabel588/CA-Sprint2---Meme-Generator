@@ -45,6 +45,11 @@ function clearLine() {
 }
 
 
+function changeLine() {
+  gMeme.selectedLineIdx++
+  if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
+
+}
 
 //************ CANVAS MECHANICS ************//
 

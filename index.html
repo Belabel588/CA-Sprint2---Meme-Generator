@@ -34,22 +34,35 @@
   <section class="editor grid">
 
 
-    <!-- ! CANVAS -->
+    <!--**************** CANVAS **************** -->
+
+
     <canvas class="meme-canvas" height="450" width="450">
       <img class="meme-img" src="" alt="meme-img">
     </canvas>
 
 
-    <!-- ! EDITOR -->
+    <!--**************** EDITOR TOOLS  **************** -->
+
     <section class="editor-container grid column space">
 
-      <!-- ! TEXT INPUT AND ADD BTN -->
+      <!-- ! TEXT INPUT AND LINES BTNS -->
       <div class="add-div flex row align">
+
+        <!-- ! ADD LINE BTN -->
         <input class="meme-text-input" type="text" placeholder="Type Meme's text here">
         <button class="add-line-btn"> + </button>
+
+        <!-- ! CHANGE LINE BTN  -->
+        <button class="change-line-btn">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+
+        <!-- ! REMOVE LINE BTN -->
         <button class="clear-line-btn">
           <i class="fa-solid fa-trash-can"></i>
         </button>
+
       </div>
 
 

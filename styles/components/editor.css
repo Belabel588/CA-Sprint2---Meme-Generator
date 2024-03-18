@@ -81,6 +81,35 @@ canvas {
 
 }
 
+.clear-line-btn:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.change-line-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
+
+  height: 3rem;
+  width: 3rem;
+
+  background-color: #39d1d9;
+  color: white;
+  /* border: none; */
+  padding: 1rem 1rem;
+  border-radius: 4.375rem;
+  cursor: pointer;
+
+}
+
+.change-line-btn:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
 .add-div {
   align-self: start;
   /* justify-self: center; */
@@ -100,7 +129,6 @@ canvas {
   height: 5rem;
 
   border-radius: 4.375rem;
-
 }
 
 .donwnload-meme-link {
@@ -121,6 +149,7 @@ canvas {
 .download-btn-container:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .fa-cloud-arrow-down {
@@ -145,6 +174,7 @@ canvas {
 .color-btn-container:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 
@@ -168,10 +198,18 @@ canvas {
   left: 0;
 }
 
+#color-picker:hover {
+  cursor: pointer;
+}
+
 .increase-text-btn {
   color: rgb(197, 128, 43);
   background-color: rgb(197, 128, 43);
   border: none;
+}
+
+.increase-text-btn:hover {
+  cursor: pointer;
 }
 
 .font-size-plus-btn-container {
@@ -187,6 +225,7 @@ canvas {
 .font-size-plus-btn-container:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 
@@ -213,6 +252,10 @@ canvas {
   border: none;
 }
 
+.decrease-text-btn:hover {
+  cursor: pointer;
+}
+
 .font-size-minus-btn-container {
   background-color: rgb(197, 189, 43);
   align-items: center;
@@ -226,6 +269,7 @@ canvas {
 .font-size-minus-btn-container:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .fa-minus {
