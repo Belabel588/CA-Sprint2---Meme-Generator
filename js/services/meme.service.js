@@ -12,6 +12,24 @@ function getMeme() {
 }
 
 
+//************ NAVIGATION MECHANICS ************//
+function showGallery() {
+  const elEditorSection = document.querySelector('.editor')
+  const elGallerySection = document.querySelector('.gallery')
+
+  elEditorSection.classList.add('hide')
+  elGallerySection.classList.remove('hide')
+}
+function showEditor() {
+  const elGallerySection = document.querySelector('.gallery')
+  const elEditorSection = document.querySelector('.editor')
+
+
+  elGallerySection.classList.add('hide')
+  elEditorSection.classList.remove('hide')
+}
+
+
 //************ EDITOR MECHANICS ************//
 function setLineTxt(txt) {
   gMeme.lines[gMeme.selectedLineIdx].txt = txt

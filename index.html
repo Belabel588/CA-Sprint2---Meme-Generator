@@ -25,13 +25,29 @@
 
 <body class="grid" onload="onInit()">
 
+  <!--**************** HEADER **************** -->
+  <header class="meme-generator-header">
+
+    <h1 class="meme-generator-title">Ori's Meme Generator</h1>
 
 
+    <nav class="meme-generator-nav">
+
+      <ul class="meme-generator-nav-list">
+
+        <div class="ul-div flex space">
+          <li class="gallery-page" onclick="showGallery()">Gallery</li>
+          <li class="edit-page" onclick="showEditor()">Edit</li>
+        </div>
+
+      </ul>
+    </nav>
+  </header>
 
 
   <!--**************** EDITOR SECTION **************** -->
 
-  <section class="editor grid">
+  <section class=" editor grid">
 
 
     <!--**************** CANVAS **************** -->
@@ -122,17 +138,6 @@
   <section class="gallery grid center columns-auto">
 
   </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

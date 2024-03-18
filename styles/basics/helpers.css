@@ -46,3 +46,11 @@
 .grid.row {
   grid-template-rows: min-max(10px, auto);
 }
+
+
+
+/* ************ UTIL ************ */
+
+.hide {
+  display: none;
+}

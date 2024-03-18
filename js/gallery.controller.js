@@ -11,7 +11,7 @@ function onRenderImgs() {
 
   imgs.forEach(img => {
     strHtml += `
-    <img src="${img.url}" alt="meme image" onclick="OnRenderMeme(${img.id})">
+    <img src="${img.url}" alt="meme image" onclick="OnRenderMeme(${img.id});showEditor()">
     `
   }
   )

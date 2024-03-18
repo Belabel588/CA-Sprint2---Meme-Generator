@@ -30,7 +30,7 @@ canvas {
   min-width: 15rem;
   max-width: 30rem;
   border-radius: 4.375rem;
-  background-color: rgba(57, 217, 57, 0.736);
+  background-color: rgba(74, 226, 23, 0.736);
 }
 
 .meme-text-input::placeholder {
