@@ -103,7 +103,20 @@ function AddText(line, text, x, y) {
 
   gCtx.strokeStyle = 'black'
   gCtx.strokeText(text, x, y)
+
+  frameText(line, text, x, y)
+
+
 }
+
+function frameText(line, text, x, y) {
+  const textWidth = gCtx.measureText(text).width
+  const textHeight = line.size
+
+
+  gCtx.strokeRect(x, y - textHeight, textWidth, textHeight)
+}
+
 
 
 //****** canvas adaptability of size to choice of img ******//
