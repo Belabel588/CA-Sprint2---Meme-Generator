@@ -92,7 +92,15 @@ function renderMeme(imgId) {
     meme.lines.forEach(line => {
       AddText(line, line.txt, line.x, line.y)
     })
+
+    //! frame the line that is currently being edited 
+
+    frameText(meme.lines[meme.selectedLineIdx],
+      meme.lines[meme.selectedLineIdx].txt,
+      meme.lines[meme.selectedLineIdx].x,
+      meme.lines[meme.selectedLineIdx].y)
   }
+
 }
 
 function AddText(line, text, x, y) {
@@ -104,7 +112,7 @@ function AddText(line, text, x, y) {
   gCtx.strokeStyle = 'black'
   gCtx.strokeText(text, x, y)
 
-  frameText(line, text, x, y)
+  // frameText(line, text, x, y)
 
 
 }

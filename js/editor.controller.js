@@ -101,6 +101,7 @@ function onChangeLine() {
   elChangeLineBtn.addEventListener('click', () => {
     changeLine()
     OnRenderMeme(gMeme.selectedImgId)
+
   })
 }
 
