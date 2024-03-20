@@ -3,6 +3,14 @@
 }
 
 
+.img-search {
+  margin: 0 auto;
+  width: 40em;
+  height: 4em;
+  border-radius: 4.375em;
+  background-color: rgb(117, 221, 152);
+  color: white;
+}
 
 .add-file-container {
   margin: 0 auto;

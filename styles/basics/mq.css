@@ -40,6 +40,15 @@
     min-height: 20em;
   }
 
+  .img-search {
+    margin: 0 auto;
+    width: 40em;
+    height: 4em;
+    border-radius: 4.375em;
+    background-color: rgb(117, 221, 152);
+    color: white;
+  }
+
   .meme-text-input {
     font-size: 1.5em;
     color: white;
@@ -743,6 +752,15 @@
     transform: scale(1.1);
     transition: 0.5s;
     cursor: pointer;
+  }
+
+  .img-search {
+    margin: 0 auto;
+    width: 25em;
+    height: 4em;
+    border-radius: 4.375em;
+    background-color: rgb(117, 221, 152);
+    color: white;
   }
 
 }

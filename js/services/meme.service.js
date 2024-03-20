@@ -20,7 +20,7 @@ const TOUCH_EVENTS = ['touchstart', 'touchmove', 'touchend']
 gImgs = _createImgs()
 gMeme = _createMeme()
 
-let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
+let gKeywordSearchCountMap = { 'funny': 12, 'history': 1, 'yes and no': 10, 'slap': 2, 'motivation': 5, 'cynical': 8 }
 
 
 
@@ -48,6 +48,10 @@ function showGallery() {
   const elGallerySection = document.querySelector('.gallery')
   const elAddImageBtn = document.querySelector('.add-file-container')
 
+  const elSearchImg = document.querySelector('.img-search')
+
+
+
   elAddImageBtn.classList.remove('hide')
 
 
@@ -55,12 +59,18 @@ function showGallery() {
   elEditorSection.classList.add('hide')
   elGallerySection.classList.remove('hide')
 
+  elSearchImg.classList.remove('hide')
+
 
   _saveGallery()
 }
+
+
 function showEditor() {
   const elGallerySection = document.querySelector('.gallery')
   const elEditorSection = document.querySelector('.editor')
+
+  const elSearchImg = document.querySelector('.img-search')
 
   const elAddImageBtn = document.querySelector('.add-file-container')
 
@@ -70,6 +80,8 @@ function showEditor() {
 
   elGallerySection.classList.add('hide')
   elEditorSection.classList.remove('hide')
+
+  elSearchImg.classList.add('hide')
 
   _saveMeme()
   _saveGallery()
@@ -249,7 +261,10 @@ function moveText(dx, dy) {
   _saveMeme()
 }
 
-//************ UTIL FUNCTION************//
+
+
+
+//************ STORAGE FUNCTIONS ************//
 
 function _saveMeme() {
   saveToStorage(MEME_KEY, gMeme)
@@ -298,6 +313,9 @@ function _createImgs() {
 
 
 
+
+
+//************ UTIL FUNCTION************//
 
 
 function getRandomInt(min, max) {
