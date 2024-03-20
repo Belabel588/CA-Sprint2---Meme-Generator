@@ -22,8 +22,10 @@
 
 
 
+<!--**************** APP STARTING AND BODY  **************** -->
 
 <body class="grid" onload="onInit()">
+
 
   <!--**************** HEADER **************** -->
   <header class="meme-generator-header">
@@ -52,10 +54,11 @@
 
     <!--**************** CANVAS **************** -->
 
-
-    <canvas class="meme-canvas" height="450" width="450">
-      <img class="meme-img" src="" alt="meme-img">
-    </canvas>
+    <div class="canvas-container">
+      <canvas class="meme-canvas" height="450" width="450">
+        <img class="meme-img" src="" alt="meme-img">
+      </canvas>
+    </div>
 
 
     <!--**************** EDITOR TOOLS  **************** -->
@@ -127,11 +130,6 @@
 
 
 
-
-
-
-
-
   <!--**************** GALLERY SECTION **************** -->
 
 
@@ -149,8 +147,6 @@
 
   <!--**************** SERVICES **************** -->
 
-
-  <script src="js/main.js"></script>
   <script src="js/services/meme.service.js"></script>
 
 

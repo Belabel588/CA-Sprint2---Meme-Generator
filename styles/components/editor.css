@@ -5,7 +5,7 @@
 
 .editor {
   margin: 0 auto;
-  width: 50%;
+  max-width: 50%;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 5rem;
@@ -13,7 +13,10 @@
 }
 
 
-
+.canvas-container {
+  width: 25rem;
+  height: 25rem;
+}
 
 canvas {
   border: 1px solid #000;

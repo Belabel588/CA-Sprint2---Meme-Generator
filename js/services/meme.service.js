@@ -1,4 +1,39 @@
 'use strict'
+'use strict'
+
+//************ GLOBALS ************//
+let gElCanvas
+let gCtx
+let gStartPos
+const TOUCH_EVENTS = ['touchstart', 'touchmove', 'touchend']
+
+
+
+//************ DATA ************//
+
+let gImgs = [
+  { id: 1, url: 'imgs/01.jpg', keywords: ['funny', 'history'] },
+  { id: 2, url: 'imgs/02.jpg', keywords: ['funny', 'yes and no'] },
+  { id: 3, url: 'imgs/03.jpg', keywords: ['funny', 'sad', 'slap'] },
+  { id: 4, url: 'imgs/04.jpg', keywords: ['funny', 'strengh', 'motivation'] },
+  { id: 5, url: 'imgs/05.jpg', keywords: ['funny', 'yes and no'] },
+  { id: 6, url: 'imgs/06.jpg', keywords: ['funny', 'cynical'] }
+]
+
+
+let gMeme = {
+  selectedImgId: 1,
+  selectedLineIdx: 0,
+  lines: [
+    addLine(`meme's text`, 40, { x: 20, y: 50 }, 'white')
+  ]
+}
+
+let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
+
+
+
+
 
 
 //************ DATA CONTROL FUNCTIONS ************//
@@ -9,6 +44,10 @@ function getImgs() {
 
 function getMeme() {
   return gMeme
+}
+
+function getLine() {
+  return gMeme.lines[gMeme.selectedLineIdx]
 }
 
 
@@ -48,18 +87,20 @@ function setSmallerTxt() {
 
 }
 
-function addLine() {
-  gMeme.lines.push({
-    txt: `new text`,
-    size: 40,
-    color: 'white',
-    x: 20,
-    y: getRandomInt(0, gElCanvas.height)
-  })
+function addLine(txt, size, pos, color) {
+  return {
+    txt: txt,
+    size: size,
+    pos: pos,
+    isDrag: false,
+    color: color,
+  }
 }
 
+
+
 function clearLine() {
-  gMeme.lines.splice(gMeme.selectedLineIdx, 1);
+  gMeme.lines.splice(gMeme.selectedLineIdx, 1)
 }
 
 
@@ -90,15 +131,15 @@ function renderMeme(imgId) {
 
     //! where the addText is activated
     meme.lines.forEach(line => {
-      AddText(line, line.txt, line.x, line.y)
+      AddText(line, line.txt, line.pos.x, line.pos.y)
     })
 
     //! frame the line that is currently being edited 
 
     frameText(meme.lines[meme.selectedLineIdx],
       meme.lines[meme.selectedLineIdx].txt,
-      meme.lines[meme.selectedLineIdx].x,
-      meme.lines[meme.selectedLineIdx].y)
+      meme.lines[meme.selectedLineIdx].pos.x,
+      meme.lines[meme.selectedLineIdx].pos.y)
   }
 
 }
@@ -112,7 +153,6 @@ function AddText(line, text, x, y) {
   gCtx.strokeStyle = 'black'
   gCtx.strokeText(text, x, y)
 
-  // frameText(line, text, x, y)
 
 
 }
@@ -135,12 +175,36 @@ function fitCanvasForImg(elImg) {
 }
 
 
+//************ MOVE MECHANICS  ************//
+function isTextClicked(clickedPos) {
+  const linePos = gMeme.lines[gMeme.selectedLineIdx]
 
+  // Calc the distance between two dots
+  const textWidth = gCtx.measureText(linePos.txt).width
+  const textHeight = linePos.size
+
+  if (clickedPos.x > linePos.pos.x &&
+    clickedPos.x < linePos.pos.x + textWidth &&
+    clickedPos.y < linePos.pos.y &&
+    clickedPos.y > linePos.pos.y - textHeight) {
+    return true
+  }
+}
+
+function setTextDrag(isDrag) {
+
+  gMeme.lines[gMeme.selectedLineIdx].isDrag = isDrag
+}
+
+function moveText(dx, dy) {
+  gMeme.lines[gMeme.selectedLineIdx].pos.x += dx
+  gMeme.lines[gMeme.selectedLineIdx].pos.y += dy
+}
 
 //************ UTIL FUNCTION************//
 
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
