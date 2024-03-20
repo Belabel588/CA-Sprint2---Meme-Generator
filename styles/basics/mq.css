@@ -23,6 +23,18 @@
     background-color: rgba(136, 89, 0, 0.572);
   } */
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 0.4em;
+    background-color: #12cd72;
+    border-radius: 5em;
+    color: white;
+  }
+
   .canvas-container {
     min-width: 20em;
     min-height: 20em;
@@ -312,13 +324,38 @@
 
   } */
 
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 0.6em;
+    background-color: #12cd72;
+    border-radius: 5em;
+    color: white;
+  }
+
+  .editor {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 80%;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 2em;
+
+  }
+
+
   h1 {
     font-Size: 2em;
   }
 
   .canvas-container {
-    min-width: 15em;
-    min-height: 15em;
+    min-width: 20em;
+    min-height: 20em;
   }
 
   .meme-text-input {
