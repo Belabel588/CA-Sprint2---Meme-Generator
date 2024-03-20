@@ -8,8 +8,12 @@
   max-width: 50%;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
 
+}
+
+.editor-container {
+  gap: 4rem;
 }
 
 
@@ -126,6 +130,9 @@ canvas {
 }
 
 .download-btn-container {
+  display: grid;
+  justify-self: center;
+
   background-color: rgb(165, 45, 198);
   align-items: center;
   width: 13rem;

@@ -88,15 +88,6 @@
       <!-- ! MEME TOOLS -->
       <section class="meme-tools grid row">
 
-        <!-- ! DOWNLOAD BTN -->
-        <div class="download-btn-container flex">
-          <a class="donwnload-meme-link flex row space align" href="#" onclick="onDownloadMeme(this)"
-            download='meme.jpg'>
-            <i class="fa-solid fa-cloud-arrow-down"></i>
-            Download
-          </a>
-        </div>
-
         <!-- ! COLOR PICKER -->
         <div class="color-btn-container flex row align">
           <i class="fa-solid fa-brush"></i>
@@ -125,6 +116,15 @@
         </div>
       </section>
 
+      <!-- ! DOWNLOAD BTN -->
+      <div class="download-btn-container flex">
+        <a class="donwnload-meme-link flex row space align" href="#" onclick="onDownloadMeme(this)" download='meme.jpg'>
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          Download
+        </a>
+      </div>
+
+
     </section>
   </section>
 
@@ -133,8 +133,14 @@
   <!--**************** GALLERY SECTION **************** -->
 
 
-  <section class="gallery grid center columns-auto">
+  <div class="add-file-container hide">
+    <label class="add-image-label" for="file-input"> Add image </label>
+    <input type="file" id="file-input" name="image" onchange="onImgInput(event)" accept="image/*" />
+  </div>
+  <!-- <button class="add-image-btn hide">Add image</button> -->
 
+
+  <section class="gallery grid center columns-auto">
   </section>
 
 

@@ -55,13 +55,25 @@ function getLine() {
 function showGallery() {
   const elEditorSection = document.querySelector('.editor')
   const elGallerySection = document.querySelector('.gallery')
+  const elAddImageBtn = document.querySelector('.add-file-container')
+
+  elAddImageBtn.classList.remove('hide')
+
+
 
   elEditorSection.classList.add('hide')
   elGallerySection.classList.remove('hide')
+
+
 }
 function showEditor() {
   const elGallerySection = document.querySelector('.gallery')
   const elEditorSection = document.querySelector('.editor')
+
+  const elAddImageBtn = document.querySelector('.add-file-container')
+
+  elAddImageBtn.classList.add('hide')
+
 
 
   elGallerySection.classList.add('hide')
