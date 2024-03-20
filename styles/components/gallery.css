@@ -72,6 +72,11 @@
   cursor: pointer;
 }
 
+.remove-img-btn:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
 .gallery {
   height: fit-content;
   gap: 0.5rem;
