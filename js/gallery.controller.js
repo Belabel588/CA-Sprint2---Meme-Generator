@@ -44,5 +44,13 @@ function onUploadImage() {
     })
     reader.readAsDataURL(event.target.files[0])
   })
+}
 
+function onDeleteImg() {
+  let imgs = getImgs()
+  imgs.pop()
+
+  onRenderImgs()
+
+  _saveGallery()
 }
