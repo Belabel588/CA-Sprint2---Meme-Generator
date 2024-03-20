@@ -154,8 +154,7 @@ function onMove(ev) {
 
 
   moveText(dx, dy)
-
-
+  gStartPos = pos
   OnRenderMeme(gMeme.selectedImgId)
 }
 
