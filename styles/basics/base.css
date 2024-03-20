@@ -9,8 +9,8 @@ html {
 body {
   margin: 0 auto;
   min-width: fit-content;
-  padding: 5rem;
-  gap: 5rem;
+  padding: 5em;
+  gap: 5em;
 
   background-color: #333333;
 }

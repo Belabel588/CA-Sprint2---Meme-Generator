@@ -8,14 +8,14 @@ header {
   align-items: center;
 
   width: 100%;
-  padding: 1rem;
+  padding: 1em;
   background-color: #12cd72;
-  border-radius: 5rem;
+  border-radius: 5em;
   color: white;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 ul {
@@ -23,7 +23,7 @@ ul {
 }
 
 ul li {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 li:hover {
@@ -33,5 +33,5 @@ li:hover {
 }
 
 .ul-div {
-  gap: 2rem;
+  gap: 2em;
 }

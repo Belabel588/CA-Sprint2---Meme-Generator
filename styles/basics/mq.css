@@ -1,0 +1,584 @@
+/** LARGE - PC/TV **/
+
+@media(min-width: 980px) {
+
+
+  /* body {
+    background-color: rgba(0, 72, 0, 0.459);
+  } */
+}
+
+
+
+
+
+
+
+/** MEDIUM - IPAD/ Big Phones **/
+@media(min-width:710px) and (max-width:980px) {
+
+
+
+  /* body {
+    background-color: rgba(136, 89, 0, 0.572);
+  } */
+
+  .canvas-container {
+    min-width: 20em;
+    min-height: 20em;
+  }
+
+  .meme-text-input {
+    font-size: 2.5em;
+    color: white;
+    height: 1em;
+    width: 3em;
+    border-radius: 4.375em;
+    background-color: rgba(74, 226, 23, 0.736);
+  }
+
+
+  .meme-text-input::placeholder {
+    color: rgba(255, 255, 255, 0.695);
+    font-size: 0.5em;
+  }
+
+
+  .add-line-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.8em;
+
+    height: 1.3em;
+    width: 1.5em;
+
+    background-color: #39d939;
+    color: white;
+    /* border: none; */
+    padding: 0.5em 0.5em;
+    border-radius: 4.375em;
+    cursor: pointer;
+
+  }
+
+  .add-line-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .clear-line-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1em;
+
+    height: 2.4em;
+    width: 2.7em;
+
+    background-color: #d94139;
+    color: white;
+    /* border: none; */
+    padding: 1em 1em;
+    border-radius: 4.375em;
+    cursor: pointer;
+
+  }
+
+  .clear-line-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .change-line-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1em;
+
+    height: 2.3em;
+    width: 2.6em;
+
+    background-color: #39d1d9;
+    color: white;
+    /* border: none; */
+    padding: 1em 1em;
+    border-radius: 4.375em;
+    cursor: pointer;
+
+  }
+
+  .change-line-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .add-div {
+    align-self: start;
+    /* justify-self: center; */
+    gap: 0.1em;
+  }
+
+
+  .meme-tools {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+
+  }
+
+  .download-btn-container {
+    display: grid;
+    justify-self: center;
+
+    background-color: rgb(165, 45, 198);
+    align-items: center;
+    width: 8em;
+    height: 3.4em;
+
+    border-radius: 4.375em;
+  }
+
+  .donwnload-meme-link {
+    justify-content: start;
+    font-size: 1.2em;
+    height: 0.8em;
+    width: 0.1em;
+
+    color: white;
+    /* border: none; */
+    text-decoration: none;
+    cursor: pointer;
+
+    gap: 1.4em;
+  }
+
+  .download-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .fa-cloud-arrow-down {
+    margin-bottom: 0.9em;
+    margin-left: 0.3em;
+    font-size: 0.9em;
+    width: 0.2em;
+    height: 0.2em;
+  }
+
+  .color-btn-container {
+
+    background-color: rgb(77, 43, 197);
+    align-items: center;
+    justify-content: center;
+    width: 6.9em;
+    height: 3.8em;
+    border-radius: 4.375em;
+    gap: 1em;
+
+  }
+
+  .color-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+
+
+  .fa-brush {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2em;
+    width: 0.2em;
+    height: 0.2em;
+  }
+
+  .color-picker-label {
+    font-size: 2em;
+    color: white;
+  }
+
+
+  #color-picker {
+    top: 50px;
+    left: 0;
+  }
+
+  #color-picker:hover {
+    cursor: pointer;
+  }
+
+  .increase-text-btn {
+    color: rgb(197, 128, 43);
+    background-color: rgb(197, 128, 43);
+    border: none;
+  }
+
+  .increase-text-btn:hover {
+    cursor: pointer;
+  }
+
+  .font-size-plus-btn-container {
+    background-color: rgb(197, 128, 43);
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 4em;
+    border-radius: 4.375em;
+
+  }
+
+  .font-size-plus-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+
+
+  .fa-text-height {
+    color: white;
+    margin-right: 2em;
+    font-size: 2em;
+    width: 0.2em;
+    height: 0.2em;
+  }
+
+  .fa-plus {
+    color: white;
+    margin-right: 1em;
+    font-size: 2em;
+    width: 0.1em;
+    height: 0.3em;
+  }
+
+  .decrease-text-btn {
+    color: rgb(197, 189, 43);
+    background-color: rgb(197, 189, 43);
+    border: none;
+  }
+
+  .decrease-text-btn:hover {
+    cursor: pointer;
+  }
+
+  .font-size-minus-btn-container {
+    background-color: rgb(197, 189, 43);
+    align-items: center;
+    justify-content: center;
+    width: 6.8em;
+    height: 4em;
+    border-radius: 4.375em;
+    gap: 3em;
+  }
+
+  .font-size-minus-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .fa-minus {
+    color: white;
+    margin-right: 1em;
+    font-size: 2em;
+    width: 0.1em;
+    height: 0.3em;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/** SMALL - PHONES **/
+@media(max-width:700px) {
+  /* body {
+    background-color: rgba(87, 1, 1, 0.598);
+
+  } */
+
+  h1 {
+    font-Size: 2em;
+  }
+
+  .canvas-container {
+    min-width: 15em;
+    min-height: 15em;
+  }
+
+  .meme-text-input {
+    font-size: 2.5em;
+    color: white;
+    height: 1em;
+    width: 3em;
+    border-radius: 4.375em;
+    background-color: rgba(74, 226, 23, 0.736);
+  }
+
+
+  .meme-text-input::placeholder {
+    color: rgba(255, 255, 255, 0.695);
+    font-size: 0.5em;
+  }
+
+
+  .add-line-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.8em;
+
+    height: 1.3em;
+    width: 1.5em;
+
+    background-color: #39d939;
+    color: white;
+    /* border: none; */
+    padding: 0.5em 0.5em;
+    border-radius: 4.375em;
+    cursor: pointer;
+
+  }
+
+  .add-line-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .clear-line-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1em;
+
+    height: 2.4em;
+    width: 2.7em;
+
+    background-color: #d94139;
+    color: white;
+    /* border: none; */
+    padding: 1em 1em;
+    border-radius: 4.375em;
+    cursor: pointer;
+
+  }
+
+  .clear-line-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .change-line-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1em;
+
+    height: 2.3em;
+    width: 2.6em;
+
+    background-color: #39d1d9;
+    color: white;
+    /* border: none; */
+    padding: 1em 1em;
+    border-radius: 4.375em;
+    cursor: pointer;
+
+  }
+
+  .change-line-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .add-div {
+    align-self: start;
+    /* justify-self: center; */
+    gap: 0.1em;
+  }
+
+
+  .meme-tools {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+
+  }
+
+  .download-btn-container {
+    display: grid;
+    justify-self: center;
+
+    background-color: rgb(165, 45, 198);
+    align-items: center;
+    width: 7.5em;
+    height: 2.8em;
+
+    border-radius: 4.375em;
+  }
+
+  .donwnload-meme-link {
+    justify-content: start;
+    font-size: 1.2em;
+    height: 0.8em;
+    width: 0.1em;
+
+    color: white;
+    /* border: none; */
+    text-decoration: none;
+    cursor: pointer;
+
+    gap: 1.4em;
+  }
+
+  .download-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .fa-cloud-arrow-down {
+    margin-bottom: 0.9em;
+    margin-left: 0.3em;
+    font-size: 0.9em;
+    width: 0.2em;
+    height: 0.2em;
+  }
+
+  .color-btn-container {
+
+    background-color: rgb(77, 43, 197);
+    align-items: center;
+    justify-content: center;
+    width: 6em;
+    height: 3.2em;
+    border-radius: 4.375em;
+    gap: 1em;
+
+  }
+
+  .color-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+
+
+  .fa-brush {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+
+  }
+
+  .color-picker-label {
+    font-size: 2em;
+    color: white;
+  }
+
+
+  #color-picker {
+    top: 2em;
+  }
+
+  #color-picker:hover {
+    cursor: pointer;
+  }
+
+  .increase-text-btn {
+    color: rgb(197, 128, 43);
+    background-color: rgb(197, 128, 43);
+    border: none;
+  }
+
+  .increase-text-btn:hover {
+    cursor: pointer;
+  }
+
+  .font-size-plus-btn-container {
+    background-color: rgb(197, 128, 43);
+    align-items: center;
+    justify-content: center;
+    width: 6.2em;
+    height: 2.9em;
+    border-radius: 4.375em;
+
+  }
+
+  .font-size-plus-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+
+
+  .fa-text-height {
+    color: white;
+    margin-right: 2em;
+    font-size: 1.6em;
+    width: 0.2em;
+    height: 0.2em;
+  }
+
+  .fa-plus {
+    color: white;
+    margin-right: 1em;
+    font-size: 1.6em;
+    width: 0.1em;
+    height: 0.3em;
+  }
+
+  .decrease-text-btn {
+    color: rgb(197, 189, 43);
+    background-color: rgb(197, 189, 43);
+    border: none;
+  }
+
+  .decrease-text-btn:hover {
+    cursor: pointer;
+  }
+
+  .font-size-minus-btn-container {
+    background-color: rgb(197, 189, 43);
+    align-items: center;
+    justify-content: center;
+    width: 6em;
+    height: 2.9em;
+    border-radius: 4.375em;
+    gap: 3em;
+  }
+
+  .font-size-minus-btn-container:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .fa-minus {
+    color: white;
+    margin-right: 1em;
+    font-size: 1.6em;
+    width: 0.1em;
+    height: 0.3em;
+  }
+
+}
