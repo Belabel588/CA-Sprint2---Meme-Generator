@@ -18,6 +18,9 @@ function onInit() {
   onAddLine()
   onClearLine()
   onChangeLine()
+  onUploadImage()
+
+
 }
 
 
