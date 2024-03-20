@@ -342,7 +342,7 @@
     grid-template-columns: 1fr;
     margin: 0 auto;
     max-width: 80%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     gap: 2em;
 
