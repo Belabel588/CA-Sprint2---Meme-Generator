@@ -103,6 +103,24 @@ function setSmallerTxt() {
   _saveMeme()
 }
 
+function moveTextRight() {
+  gMeme.lines[gMeme.selectedLineIdx].pos.x = gElCanvas.width / 2
+
+  _saveMeme()
+}
+
+function moveTextLeft() {
+  gMeme.lines[gMeme.selectedLineIdx].pos.x = gElCanvas.width / -3
+
+  _saveMeme()
+}
+
+function moveTextCenter() {
+  gMeme.lines[gMeme.selectedLineIdx].pos.x = gElCanvas.width / 4
+
+  _saveMeme()
+}
+
 function addLine(txt, size, pos, color) {
   return {
     txt: txt,

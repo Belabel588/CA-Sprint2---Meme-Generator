@@ -301,6 +301,69 @@
     height: 0.3em;
   }
 
+  .move-right-btn {
+    display: grid;
+    background-color: rgb(161, 43, 0);
+    align-items: center;
+    justify-content: center;
+    width: 8.7em;
+    height: 4.8em;
+    border-radius: 4.375em;
+    border: none;
+  }
+
+  .fa-align-right {
+    font-size: 1.7em;
+  }
+
+  .move-right-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .move-left-btn {
+    display: grid;
+    background-color: rgb(0, 161, 134);
+    align-items: center;
+    justify-content: center;
+    width: 8.7em;
+    height: 4.8em;
+    border-radius: 4.375em;
+    border: none;
+  }
+
+  .fa-align-left {
+    font-size: 1.7em;
+  }
+
+  .move-left-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .move-center-btn {
+    display: grid;
+    background-color: rgb(125, 0, 59);
+    align-items: center;
+    justify-content: center;
+    width: 8.7em;
+    height: 4.8em;
+    border-radius: 4.375em;
+    border: none;
+  }
+
+  .fa-align-center {
+    font-size: 1.7em;
+  }
+
+  .move-center-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
 
 
 
@@ -614,6 +677,69 @@
     font-size: 1.6em;
     width: 0.1em;
     height: 0.3em;
+  }
+
+  .move-right-btn {
+    display: grid;
+    background-color: rgb(161, 43, 0);
+    align-items: center;
+    justify-content: center;
+    width: 7.5em;
+    height: 3.6em;
+    border-radius: 4.375em;
+    border: none;
+  }
+
+  .fa-align-right {
+    font-size: 1.7em;
+  }
+
+  .move-right-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .move-left-btn {
+    display: grid;
+    background-color: rgb(0, 161, 134);
+    align-items: center;
+    justify-content: center;
+    width: 7.5em;
+    height: 3.6em;
+    border-radius: 4.375em;
+    border: none;
+  }
+
+  .fa-align-left {
+    font-size: 1.7em;
+  }
+
+  .move-left-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .move-center-btn {
+    display: grid;
+    background-color: rgb(125, 0, 59);
+    align-items: center;
+    justify-content: center;
+    width: 7.5em;
+    height: 3.6em;
+    border-radius: 4.375em;
+    border: none;
+  }
+
+  .fa-align-center {
+    font-size: 1.7em;
+  }
+
+  .move-center-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
   }
 
 }

@@ -18,6 +18,9 @@ function onInit() {
   onChangeColor()
   onBiggerTxt()
   onSmallerTxt()
+  onMoveTextRight()
+  onMoveTextLeft()
+  onMoveTextCenter()
   onAddLine()
   onClearLine()
   onChangeLine()
@@ -75,6 +78,35 @@ function onSmallerTxt() {
   elSmallerTxtBtn.addEventListener('click', () => {
     setSmallerTxt()
     OnRenderMeme(gMeme.selectedImgId)
+  })
+}
+
+function onMoveTextRight() {
+  const elMoveTextRightBtn = document.querySelector('.move-right-btn')
+
+  elMoveTextRightBtn.addEventListener('click', () => {
+    moveTextRight()
+    OnRenderMeme(gMeme.selectedImgId)
+
+  })
+}
+function onMoveTextLeft() {
+  const elMoveTextLeftBtn = document.querySelector('.move-left-btn')
+
+  elMoveTextLeftBtn.addEventListener('click', () => {
+    moveTextLeft()
+    OnRenderMeme(gMeme.selectedImgId)
+
+  })
+}
+
+function onMoveTextCenter() {
+  const elMoveTextLeftBtn = document.querySelector('.move-center-btn')
+
+  elMoveTextLeftBtn.addEventListener('click', () => {
+    moveTextCenter()
+    OnRenderMeme(gMeme.selectedImgId)
+
   })
 }
 
