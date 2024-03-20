@@ -39,8 +39,10 @@ function onUploadImage() {
     reader.addEventListener('load', () => {
       uploadedImg = reader.result
       imgs.push({ id: moreImgsId(), url: uploadedImg })
+      _saveGallery()
       onRenderImgs()
     })
     reader.readAsDataURL(event.target.files[0])
   })
+
 }

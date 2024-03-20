@@ -2,6 +2,9 @@
 
 //************ PAGE LOADING FUNCTIONS ************//
 function onInit() {
+  _createMeme()
+  _createImgs()
+
   gElCanvas = document.querySelector('.meme-canvas')
   gCtx = gElCanvas.getContext('2d')
   addMoveListeners()

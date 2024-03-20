@@ -1,7 +1,13 @@
 'use strict'
-'use strict'
+
 
 //************ GLOBALS ************//
+const MEME_KEY = 'meme_DB'
+const GALLERY_KEY = 'gallery_DB'
+
+
+let gMeme
+let gImgs
 let gElCanvas
 let gCtx
 let gStartPos
@@ -9,25 +15,10 @@ const TOUCH_EVENTS = ['touchstart', 'touchmove', 'touchend']
 
 
 
+
 //************ DATA ************//
-
-let gImgs = [
-  { id: 1, url: 'imgs/01.jpg', keywords: ['funny', 'history'] },
-  { id: 2, url: 'imgs/02.jpg', keywords: ['funny', 'yes and no'] },
-  { id: 3, url: 'imgs/03.jpg', keywords: ['funny', 'sad', 'slap'] },
-  { id: 4, url: 'imgs/04.jpg', keywords: ['funny', 'strengh', 'motivation'] },
-  { id: 5, url: 'imgs/05.jpg', keywords: ['funny', 'yes and no'] },
-  { id: 6, url: 'imgs/06.jpg', keywords: ['funny', 'cynical'] }
-]
-
-
-let gMeme = {
-  selectedImgId: 1,
-  selectedLineIdx: 0,
-  lines: [
-    addLine(`meme's text`, 40, { x: 20, y: 50 }, 'white')
-  ]
-}
+gImgs = _createImgs()
+gMeme = _createMeme()
 
 let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
@@ -65,6 +56,7 @@ function showGallery() {
   elGallerySection.classList.remove('hide')
 
 
+  _saveGallery()
 }
 function showEditor() {
   const elGallerySection = document.querySelector('.gallery')
@@ -78,25 +70,37 @@ function showEditor() {
 
   elGallerySection.classList.add('hide')
   elEditorSection.classList.remove('hide')
+
+  _saveMeme()
+  _saveGallery()
+
 }
 
 
 //************ EDITOR MECHANICS ************//
 function setLineTxt(txt) {
   gMeme.lines[gMeme.selectedLineIdx].txt = txt
+
+  _saveMeme()
+  _saveGallery()
 }
 
 function setColor(color) {
   gMeme.lines[gMeme.selectedLineIdx].color = color
+
+  _saveMeme()
 }
 
 function setBiggerTxt() {
   gMeme.lines[gMeme.selectedLineIdx].size += 5
+
+  _saveMeme()
 }
 
 function setSmallerTxt() {
   gMeme.lines[gMeme.selectedLineIdx].size -= 5
 
+  _saveMeme()
 }
 
 function addLine(txt, size, pos, color) {
@@ -107,12 +111,15 @@ function addLine(txt, size, pos, color) {
     isDrag: false,
     color: color,
   }
+
 }
 
 
 
 function clearLine() {
   gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+
+  _saveMeme()
 }
 
 
@@ -120,6 +127,7 @@ function changeLine() {
   gMeme.selectedLineIdx++
   if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
 
+  _saveMeme()
 }
 
 //************ CANVAS MECHANICS ************//
@@ -154,6 +162,7 @@ function renderMeme(imgId) {
       meme.lines[meme.selectedLineIdx].pos.y)
   }
 
+  _saveMeme()
 }
 
 function AddText(line, text, x, y) {
@@ -166,7 +175,7 @@ function AddText(line, text, x, y) {
   gCtx.strokeText(text, x, y)
 
 
-
+  _saveMeme()
 }
 
 function frameText(line, text, x, y) {
@@ -175,6 +184,8 @@ function frameText(line, text, x, y) {
 
 
   gCtx.strokeRect(x, y - textHeight, textWidth, textHeight)
+
+  _saveMeme()
 }
 
 
@@ -184,6 +195,8 @@ function frameText(line, text, x, y) {
 function fitCanvasForImg(elImg) {
   gElCanvas.height = (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
   gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
+
+  _saveMeme()
 }
 
 
@@ -201,19 +214,73 @@ function isTextClicked(clickedPos) {
     clickedPos.y > linePos.pos.y - textHeight) {
     return true
   }
+  _saveMeme()
 }
 
 function setTextDrag(isDrag) {
 
   gMeme.lines[gMeme.selectedLineIdx].isDrag = isDrag
+
+  _saveMeme()
 }
 
 function moveText(dx, dy) {
   gMeme.lines[gMeme.selectedLineIdx].pos.x += dx
   gMeme.lines[gMeme.selectedLineIdx].pos.y += dy
+
+  _saveMeme()
 }
 
 //************ UTIL FUNCTION************//
+
+function _saveMeme() {
+  saveToStorage(MEME_KEY, gMeme)
+}
+
+function _saveGallery() {
+  saveToStorage(GALLERY_KEY, gImgs)
+
+
+}
+
+
+function _createMeme() {
+  gMeme = loadFromStorage('meme_DB')
+
+  if (!gMeme) {
+
+    return gMeme = {
+      selectedImgId: 1,
+      selectedLineIdx: 0,
+      lines: [
+        addLine(`meme's text`, 40, { x: 20, y: 50 }, 'white')
+      ]
+    }
+
+  }
+
+}
+
+function _createImgs() {
+  gImgs = loadFromStorage('gallery_DB')
+
+  if (!gImgs || !gImgs.length) {
+
+    return gImgs = [
+      { id: 1, url: 'imgs/01.jpg', keywords: ['funny', 'history'] },
+      { id: 2, url: 'imgs/02.jpg', keywords: ['funny', 'yes and no'] },
+      { id: 3, url: 'imgs/03.jpg', keywords: ['funny', 'sad', 'slap'] },
+      { id: 4, url: 'imgs/04.jpg', keywords: ['funny', 'strengh', 'motivation'] },
+      { id: 5, url: 'imgs/05.jpg', keywords: ['funny', 'yes and no'] },
+      { id: 6, url: 'imgs/06.jpg', keywords: ['funny', 'cynical'] }
+    ]
+  }
+
+}
+
+
+
+
 
 function getRandomInt(min, max) {
   min = Math.ceil(min)
