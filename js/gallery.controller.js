@@ -21,27 +21,12 @@ function onRenderImgs() {
 }
 
 
-// function onImgInput(ev) {
-//   loadImageFromInput(ev)
-// }
-
-// function loadImageFromInput(ev) {
-//   const reader = new FileReader()
-
-//   reader.onload = ev => {
-//     let img = new Image()
-//     img.src = ev.target.result
-//     img.onload = () => renderImg(img)
-//   }
-//   reader.readAsDataURL(ev.target.files[0])
-// }
-
-// function renderImg(img) {
-
-//   gElCanvas.height = (img.naturalHeight / img.naturalWidth) * gElCanvas.width
-
-//   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
-// }
+function moreImgsId() {
+  let imgs = getImgs()
+  let moreImgsId = imgs.length
+  moreImgsId++
+  return moreImgsId
+}
 
 
 function onUploadImage() {
@@ -53,7 +38,7 @@ function onUploadImage() {
     const reader = new FileReader()
     reader.addEventListener('load', () => {
       uploadedImg = reader.result
-      imgs.push({ id: makeid(4), url: uploadedImg })
+      imgs.push({ id: moreImgsId(), url: uploadedImg })
       onRenderImgs()
     })
     reader.readAsDataURL(event.target.files[0])
