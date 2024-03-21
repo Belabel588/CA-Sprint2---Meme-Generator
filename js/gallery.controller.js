@@ -29,6 +29,8 @@ function moreImgsId() {
 
 
 
+//************ UPLOAD IMG  FUNCTIONS ************//
+
 function onUploadImage() {
   const elImageInput = document.querySelector('#file-input')
   let uploadedImg = ''
@@ -54,6 +56,8 @@ function onDeleteImg() {
 
   _saveGallery()
 }
+
+
 
 //************ SEARCH FUNCTIONS ************//
 function onSetFilterBy() {

@@ -175,7 +175,11 @@ function onDown(ev) {
 
   gStartPos = getEvPos(ev)
 
+
+  chooseClickedLine(gStartPos)
   if (!isTextClicked(gStartPos)) return
+
+
 
   setTextDrag(true)
   document.body.style.cursor = 'grabbing'
@@ -187,6 +191,7 @@ function onMove(ev) {
   if (!isDrag) return
 
   const pos = getEvPos(ev)
+
 
   const dx = pos.x - gStartPos.x
   const dy = pos.y - gStartPos.y

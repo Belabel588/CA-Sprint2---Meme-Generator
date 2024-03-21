@@ -218,6 +218,21 @@ function frameText(line, text, x, y) {
   _saveMeme()
 }
 
+function chooseClickedLine(clickedLinePos) {
+
+  gMeme.selectedLineIdx = gMeme.lines.findIndex(line => {
+
+    let textWidth = gCtx.measureText(line.txt).width
+    let textHeight = line.size
+
+
+    return clickedLinePos.x > line.pos.x &&
+      clickedLinePos.x < line.pos.x + textWidth &&
+      clickedLinePos.y < line.pos.y &&
+      clickedLinePos.y > line.pos.y - textHeight
+  })
+}
+
 
 
 //****** canvas adaptability of size to choice of img ******//
@@ -260,6 +275,7 @@ function moveText(dx, dy) {
 
   _saveMeme()
 }
+
 
 
 
