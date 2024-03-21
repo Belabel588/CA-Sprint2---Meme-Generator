@@ -122,7 +122,7 @@ function moveTextRight() {
 }
 
 function moveTextLeft() {
-  gMeme.lines[gMeme.selectedLineIdx].pos.x = gElCanvas.width / -3
+  gMeme.lines[gMeme.selectedLineIdx].pos.x = gElCanvas.width / -10
 
   _saveMeme()
 }
