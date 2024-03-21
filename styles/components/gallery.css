@@ -8,7 +8,7 @@
   width: 40em;
   height: 4em;
   border-radius: 4.375em;
-  background-color: rgb(97, 157, 117);
+  background: linear-gradient(40deg, #0fc06a, #00cbba);
 }
 
 .img-search::placeholder {
@@ -25,7 +25,7 @@
   width: 12rem;
   padding-left: 0.5rem;
   padding-right: 0.3rem;
-  background-color: #12cd72;
+  background: linear-gradient(353.4deg, #11d8c8, #08a85a);
   color: white;
   border-radius: 3rem;
   cursor: pointer;

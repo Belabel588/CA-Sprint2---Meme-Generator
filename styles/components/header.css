@@ -9,9 +9,9 @@ header {
 
   width: 100%;
   padding: 1em;
-  background-color: #12cd72;
+  background: linear-gradient(50deg, #12cd72, #00c8b7);
   border-radius: 5em;
-  color: white;
+  color: rgba(49, 93, 102, 0.734);
 }
 
 h1 {
@@ -24,12 +24,14 @@ ul {
 
 ul li {
   font-size: 2em;
+  color: #ffffff;
 }
 
 li:hover {
   cursor: pointer;
   scale: 1.1;
   transition: 0.5s;
+
 }
 
 .ul-div {

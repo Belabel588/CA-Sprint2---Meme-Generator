@@ -3,7 +3,7 @@
 }
 
 html {
-  background-color: rgb(81, 81, 81);
+  background: linear-gradient(50deg, #2f2f2f, #0c261c);
 }
 
 body {
@@ -11,8 +11,7 @@ body {
   min-width: fit-content;
   padding: 5em;
   gap: 5em;
-
-  background-color: #333333;
+  background: linear-gradient(50deg, #2f2f2f, #0c261c);
 }
 
 
