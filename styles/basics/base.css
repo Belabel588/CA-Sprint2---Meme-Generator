@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(81, 81, 81);
+}
+
+body {
+  margin: 0 auto;
+  min-width: fit-content;
+  padding: 5em;
+  gap: 5em;
+
+  background-color: #333333;
+}
+
+
+img {
+  border-radius: 4.375rem;
+
+}
+
+img:hover {
+  transition: 700ms;
+  transform: scale(1.1);
+  cursor: pointer;
+}
