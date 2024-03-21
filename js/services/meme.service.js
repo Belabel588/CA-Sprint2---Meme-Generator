@@ -234,7 +234,7 @@ function fitCanvasForImg(elImg) {
 function isTextClicked(clickedPos) {
   const linePos = gMeme.lines[gMeme.selectedLineIdx]
 
-  // Calc the distance between two dots
+
   const textWidth = gCtx.measureText(linePos.txt).width
   const textHeight = linePos.size
 
@@ -260,6 +260,7 @@ function moveText(dx, dy) {
 
   _saveMeme()
 }
+
 
 
 

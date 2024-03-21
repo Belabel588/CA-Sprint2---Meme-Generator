@@ -3,9 +3,7 @@
 //************ GALLERY FUNCTIONS ************//
 
 
-function onRenderImgs() {
-  const imgs = getImgs()
-
+function onRenderImgs(imgs) {
 
   let strHtml = ''
 
@@ -40,7 +38,7 @@ function onUploadImage() {
       uploadedImg = reader.result
       imgs.push({ id: moreImgsId(), url: uploadedImg })
       _saveGallery()
-      onRenderImgs()
+      onRenderImgs(gImgs)
     })
     reader.readAsDataURL(event.target.files[0])
   })
@@ -50,7 +48,27 @@ function onDeleteImg() {
   let imgs = getImgs()
   imgs.pop()
 
-  onRenderImgs()
+  onRenderImgs(gImgs)
 
   _saveGallery()
+}
+
+//************ SEARCH FUNCTIONS ************//
+function onSetFilterBy() {
+  const imgs = getImgs()
+
+  const elSearchImg = document.querySelector('.img-search')
+
+  elSearchImg.addEventListener('input', () => {
+
+    const filterBy = elSearchImg.value
+    if (!filterBy) return
+
+    let filteredByKeyword = imgs.filter(img => img.keywords.includes(filterBy))
+    console.log(filteredByKeyword)
+
+
+    onRenderImgs(filteredByKeyword)
+
+  })
 }
