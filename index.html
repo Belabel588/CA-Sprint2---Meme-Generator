@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--**************** APP STARTING AND BODY  **************** -->
+
+<body class="grid" onload="onInit()">
+
+
+  <!--**************** HEADER **************** -->
+  <header class="meme-generator-header">
+
+    <h1 class="meme-generator-title">Ori's Meme Generator</h1>
+
+
+    <nav class="meme-generator-nav">
+
+      <ul class="meme-generator-nav-list">
+
+        <div class="ul-div flex space">
+          <li class="gallery-page" onclick="showGallery()">Gallery</li>
+          <li class="edit-page" onclick="showEditor()">Edit</li>
+        </div>
+
+      </ul>
+    </nav>
+  </header>
+
+
+  <!--**************** EDITOR SECTION **************** -->
+
+  <section class=" editor grid">
+
+
+    <!--**************** CANVAS **************** -->
+
+    <div class="canvas-container">
+      <canvas class="meme-canvas" height="450" width="450">
+        <img class="meme-img" src="" alt="meme-img">
+      </canvas>
+    </div>
+
+
+    <!--**************** EDITOR TOOLS  **************** -->
+
+    <section class="editor-container grid column space">
+
+      <!-- ! TEXT INPUT AND LINES BTNS -->
+      <div class="add-div flex row align">
+
+        <!-- ! ADD LINE BTN -->
+        <input class="meme-text-input" type="text" placeholder="Type Meme's text here">
+        <button class="add-line-btn"> + </button>
+
+        <!-- ! CHANGE LINE BTN  -->
+        <button class="change-line-btn">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+
+        <!-- ! REMOVE LINE BTN -->
+        <button class="clear-line-btn">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+
+      </div>
+
+
+      <!-- ! MEME TOOLS -->
+      <section class="meme-tools grid row">
+
+        <!-- ! COLOR PICKER -->
+        <div class="color-btn-container flex row align">
+          <i class="fa-solid fa-brush"></i>
+          <label class="color-picker-label" for="color-picker">
+          </label>
+          <input id="color-picker" type="color" value="#FFFFFF">
+        </div>
+
+
+
+        <!-- ! INCREASE FONT SIZE BTN -->
+        <div class="font-size-plus-btn-container flex row align">
+          <button class="increase-text-btn">
+            <i class="fa-solid fa-text-height"></i>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+
+        <!-- ! DECREASE FONT SIZE BTN -->
+        <div class="font-size-minus-btn-container flex row align">
+          <button class="decrease-text-btn">
+            <i class="fa-solid fa-text-height"></i>
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+
+        <!-- ! MOVE TEXT LEFT  -->
+        <div class="move-text-left-container">
+          <button class="move-left-btn">
+            <i class="fa-solid fa-align-left"></i>
+          </button>
+        </div>
+
+        <!-- ! MOVE TEXT RIGHT  -->
+        <div class="move-text-right-container">
+          <button class="move-right-btn">
+            <i class="fa-solid fa-align-right"></i>
+          </button>
+        </div>
+
+
+
+        <!-- ! MOVE TEXT CENTER  -->
+        <div class="move-text-center-container">
+          <button class="move-center-btn">
+            <i class="fa-solid fa-align-center"></i>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ! DOWNLOAD BTN -->
+      <div class="download-btn-container flex">
+        <a class="donwnload-meme-link flex row space align" href="#" onclick="onDownloadMeme(this)" download='meme.jpg'>
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          Download
+        </a>
+      </div>
+
+    </section>
+  </section>
+
+
+
+  <!--**************** GALLERY SECTION **************** -->
+
+
+  <div class="add-file-container hide">
+
+    <!-- ! UPLOAD BTN -->
+    <label class="add-image-label" for="file-input"> Add image </label>
+    <input type="file" id="file-input" accept="image/png,image/jpeg" />
+    <button class="remove-img-btn" onclick="onDeleteImg()">
+      <i class="fa-solid fa-trash-can"></i>
+    </button>
+
+  </div>
+  </div>
+
+  <input class="img-search hide" type="search" placeholder="Search">
+
+
+  <section class="gallery grid center columns-auto">
+  </section>
+
+
+
+
+
+
+
+
+
+  <!--**************** SERVICES **************** -->
+
+  <script src="js/services/meme.generator.storage.service.js"></script>
+  <script src="js/services/meme.service.js"></script>
+
+
+
+
+  <!--**************** CONTROLLERS **************** -->
+
+  <script src="js/editor.controller.js"></script>
+  <script src="js/gallery.controller.js"></script>
+
+
+
+  <!--**************** ADD-ONS **************** -->
+  <script src="https://kit.fontawesome.com/9a826168b8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

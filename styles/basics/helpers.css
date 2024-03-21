@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ************ FLEX ************ */
+.flex {
+  display: flex;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.space {
+  justify-content: space-between;
+}
+
+.flex.align {
+  align-items: center;
+
+}
+
+
+/* ************ GRID ************ */
+
+.grid {
+  display: grid;
+}
+
+.grid.center {
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.grid.column {
+  grid-template-columns: 1fr;
+}
+
+.grid.columns-auto img {
+  width: 100%;
+  height: auto;
+}
+
+.grid.row {
+  grid-template-rows: min-max(10px, auto);
+}
+
+
+
+/* ************ UTIL ************ */
+
+.hide {
+  display: none;
+}
