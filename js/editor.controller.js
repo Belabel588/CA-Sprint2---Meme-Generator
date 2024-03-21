@@ -14,6 +14,7 @@ function onInit() {
   showGallery()
   OnRenderMeme()
   onRenderImgs(gImgs)
+  onSetFilterBy()
   onUploadImage()
   onChangeTxt()
   onChangeColor()
@@ -25,7 +26,6 @@ function onInit() {
   onAddLine()
   onClearLine()
   onChangeLine()
-  onSetFilterBy()
 
 
 }

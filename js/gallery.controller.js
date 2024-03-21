@@ -27,6 +27,8 @@ function moreImgsId() {
 }
 
 
+
+
 function onUploadImage() {
   const elImageInput = document.querySelector('#file-input')
   let uploadedImg = ''
@@ -62,10 +64,14 @@ function onSetFilterBy() {
   elSearchImg.addEventListener('input', () => {
 
     const filterBy = elSearchImg.value
-    if (!filterBy) return
+    if (filterBy === '') {
+      onRenderImgs(imgs)
+      return
+    }
 
     let filteredByKeyword = imgs.filter(img => img.keywords.includes(filterBy))
     console.log(filteredByKeyword)
+
 
 
     onRenderImgs(filteredByKeyword)
