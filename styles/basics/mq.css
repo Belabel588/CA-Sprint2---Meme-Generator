@@ -1,12 +1,6 @@
 /** LARGE - PC/TV **/
 
-@media(min-width: 980px) {
-
-
-  /* body {
-    background-color: rgba(0, 72, 0, 0.459);
-  } */
-}
+@media(min-width: 980px) {}
 
 
 
@@ -16,12 +10,6 @@
 
 /** MEDIUM - IPAD/ Big Phones **/
 @media(min-width:710px) and (max-width:980px) {
-
-
-
-  /* body {
-    background-color: rgba(136, 89, 0, 0.572);
-  } */
 
   header {
     display: flex;
@@ -376,29 +364,33 @@
     cursor: pointer;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  .change-font-input {
+    font-size: 1.5em;
+    color: white;
+    width: 7.9em;
+    border-radius: 4.375em;
+    background-color: rgba(164, 218, 216, 0.736);
+  }
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** SMALL - PHONES **/
 @media(max-width:700px) {
-  /* body {
-    background-color: rgba(87, 1, 1, 0.598);
-
-  } */
-
-
 
   header {
     display: flex;
@@ -507,7 +499,6 @@
 
     background-color: #39d1d9;
     color: white;
-    /* border: none; */
     padding: 1em 1em;
     border-radius: 4.375em;
     cursor: pointer;
@@ -521,7 +512,6 @@
 
   .add-div {
     align-self: start;
-    /* justify-self: center; */
     gap: 0.1em;
   }
 
@@ -551,7 +541,6 @@
     width: 0.1em;
 
     color: white;
-    /* border: none; */
     text-decoration: none;
     cursor: pointer;
 
@@ -761,5 +750,13 @@
     border-radius: 4.375em;
     background-color: rgb(97, 157, 117);
     color: white;
+  }
+
+  .change-font-input {
+    font-size: 1.3em;
+    color: white;
+    width: 8.7em;
+    border-radius: 4.375em;
+    background-color: rgba(164, 218, 216, 0.736);
   }
 }

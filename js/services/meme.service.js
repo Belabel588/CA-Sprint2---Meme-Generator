@@ -133,13 +133,22 @@ function moveTextCenter() {
   _saveMeme()
 }
 
-function addLine(txt, size, pos, color) {
+
+function changeFont(font) {
+  gMeme.lines[gMeme.selectedLineIdx].font = font
+
+  _saveMeme()
+}
+
+
+function addLine(txt, size, pos, color, font) {
   return {
     txt: txt,
     size: size,
     pos: pos,
     isDrag: false,
     color: color,
+    font: font
   }
 
 }
@@ -196,7 +205,7 @@ function renderMeme(imgId) {
 }
 
 function AddText(line, text, x, y) {
-  gCtx.font = `${line.size}px Arial`
+  gCtx.font = `${line.size}px ${line.font}`
   gCtx.fillStyle = line.color
   gCtx.fillText(text, x, y)
   gCtx.lineWidth = 1
@@ -303,7 +312,7 @@ function _createMeme() {
       selectedImgId: 1,
       selectedLineIdx: 0,
       lines: [
-        addLine(`meme's text`, 40, { x: 20, y: 50 }, 'white')
+        addLine(`meme's text`, 40, { x: 20, y: 50 }, 'white', 'Arial')
       ]
     }
 

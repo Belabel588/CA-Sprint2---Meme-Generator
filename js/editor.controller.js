@@ -23,6 +23,7 @@ function onInit() {
   onMoveTextRight()
   onMoveTextLeft()
   onMoveTextCenter()
+  onChangeFont()
   onAddLine()
   onClearLine()
   onChangeLine()
@@ -111,13 +112,22 @@ function onMoveTextCenter() {
   })
 }
 
+function onChangeFont() {
+  const elFontInput = document.querySelector('.change-font-input')
+
+  elFontInput.addEventListener('change', () => {
+    changeFont(elFontInput.value)
+    onRenderImgs(gMeme.selectedImgId)
+  })
+}
+
 
 function onAddLine() {
   const elAddLineBtn = document.querySelector('.add-line-btn')
+  const elFontInput = document.querySelector('.change-font-input')
 
   elAddLineBtn.addEventListener('click', () => {
-    gMeme.lines.push(addLine(`meme's text`, 40, { x: 20, y: getRandomInt(20, 350) }, 'white'))
-    // gMeme.selectedLineIdx++
+    gMeme.lines.push(addLine(`meme's text`, 40, { x: 20, y: getRandomInt(20, 350) }, 'white', elFontInput.value))
     OnRenderMeme(gMeme.selectedImgId)
   })
 }
